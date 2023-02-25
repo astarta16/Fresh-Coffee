@@ -6,18 +6,20 @@
     --size-28:28px;
     --fw-bold:600;
 }
-
+.active{
+    border-bottom: 1.5px solid #056B11;
+    padding-bottom: 5px;
+}
+/* header for all pages */
 .active-nav {
     border-bottom: 1px solid #056B11;
 }
-
 .page-title{
     font-size:var(--size-28);
     color:var(--title-color);
     font-weight: var(--fw-bold);
     text-transform: capitalize;
 }
-
 .form-wrapper input,
 .form-wrapper textarea {
     color:var(--main-color);
@@ -74,108 +76,303 @@ header li:not(:nth-child(4)):hover {
     border-bottom: 1px solid #056B11;
 }
 
-.contact-page-title p{
-    color:var(--main-color);
-    margin-top: 30px;
+/* contact page */
+.contact-page-title p {
+    color: var(--main-color);
+    margin-top: 10px;
 }
-.contact-page-title{
+.contact-page-title {
     margin-bottom: 100px;
 }
-
 .form-wrapper input,
-.form-wrapper textarea{
-   
-    border-radius: 20px;
+.form-wrapper textarea {
     border: 1px solid var(--main-color);
-    padding: 20px 40px;
 }
-
+.form-wrapper input::placeholder,
+.form-wrapper textarea::placeholder {
+    color: var(--input-color);
+}
 .form-wrapper {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 }
-
- .form-wrapper textarea{
+.form-wrapper textarea {
     grid-column: 1/3;
-    resize:none;
+    resize: none;
 }
-
-
-
+.submit-button {
+    grid-column: 2/3;
+    border: 2px solid rgba(5, 82, 13, 1);
+    float: right;
+    border-radius: 20px;
+    width: 149px;
+    height: 39px;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+.submit-button:hover{
+    background-color:rgba(5, 82, 13, 1) ;
+    color: aliceblue;
+}
+.submit-require{
+    justify-self: end;
+    color: #7D0202;
+    font-size: 17px;
+    grid-column: 1/3;
+    resize: none;
+    margin-right: 11px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
 /* about us page */
-
-
-
-
-/* location page */
-
-
-
-
-/* footer */
-footer {
-    background-color: rgba(183, 138, 109, 0.24);
-    height: 257px;
-}
-.footer-container{
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-   padding-top: 36px;
-}
-.footer-title{
-    color:#05520D;
-    font-size: 20px;
-}
-
-
-
-
-
-
-
-
 .about-contant{
     margin-top: 200px;
-    padding: 0 5%;
 }
 .about-contant h3{
     color: #05520D;
-    font-size: 28px;
+    font-size:var(--size-28);
+    font-weight: var(--fw-bold);
 }
 .about-info img{
-    width: 473.33px;
     margin-bottom: 80px;
 }
-
 .about-info p{
-    width: 475px;
-    font-family: 'Lucida Bright';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
+    font-family: 'lucida-400';
+    font-size: var(--size-24);
     line-height: 173.27%;
-    color: #863503;
+    color:var(--main-color);
 }
-
-.flex{
+.about-info{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-
+}
+/* location page */
+.page-section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.addresses-wrapper{
+    margin: 110px 0 160px 0;
+    display:flex;
+    column-gap: 231px;
+}
+.address-line{
+    display:flex;
+    flex-direction: column;
+    row-gap: 24px;
+    color:var(--main-color);
+    font-family: 'lucida-400';
+}
+.address-line address{
+    font-family: 'lucida-600';
+}
+.location-about-contact-title{
+    font-size: var(--size-28);
+    font-family: 'lucida-600';
+    color: #05520D;
+}
+.contact-map{
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 100px;
+}
+/* footer */
+.footer{
+    background: rgba(183, 138, 109, 0.24);
+    height: 257px; 
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.social-media{
+    margin-top: 90px;
+}
+.social-media p{
+    margin-top: 20px;
+    font-size: 24px;
+    color: rgba(64, 4, 4, 1); 
+}
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 140px;
+    cursor: pointer;
+}
+.locations{
+   display: flex;
+   flex-direction: column;
+   align-items: start;   
+}
+footer p{
+    font-size: 18px;
+    color: rgba(134, 53, 3, 1);
+    padding-top: 28px;
+}
+footer h4{
+    font-size: 20px;
+    color: rgba(5, 82, 13, 1);    
+    margin-top: 36px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
-.about-container {
-    max-width: 1100px;
-    width: 90%;
-    margin: 0 auto;
+/* menu page */
+.bottom-menu  a{
+    color: #863503B2; 
+    margin-left: 30px;
 }
+.bottom-menu ul{
+    justify-content: center;
+    margin: 40px 0 40px 0;
+}
+.bottom-menu-span{
+    border-right: 1px solid #000000; 
+    width: 60px;
+    margin-left: 28px;
+}
+/* hot drinks */
+.hot-drinks-boxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 300px;
+    column-gap: 200px;
+    row-gap: 80px;
+    margin-bottom: 10%;
+}
+.hot-drinks-box{
+    display: flex;
+}
+.hot-drinks-box .name-price{
+    margin-left: 60px;
+}
+.hot-drinks-box .name-price h4{
+    font-family: 'lucida-600';
+    font-size: 20px;
+    line-height: 24px;
+    color: #05520D;
+    margin-bottom: 25px;
+}
+.hot-drinks-box .name-price span{
+    font-family: 'lucida-600';
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--input-color);
+    margin-left: 100px;
+}
+
+/* home page */
+.coffeelogo{
+    width: 100%;
+    height: 826px;
+    background-color: rgba(134, 53, 3, 0.07);
+}
+.innerheader{
+    display: flex;
+    justify-content: space-between;
+}
+.product{
+    height:402px;
+    width: 267px;
+}
+.logodescription h4{
+    font-family: 'Lucida Bright';
+    font-size: 54px;
+    font-weight: 600;
+    width: 542px;
+    height: 137px;
+    color: rgba(134, 53, 3, 1);
+    line-height: 63px;
+    margin-left: 203px;
+    margin-top: 117px;
+}
+.logodescription p{
+    font-family: 'Lucida Bright';
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(134, 53, 3, 1);
+    margin-left: 203px;
+    margin-top: 43px;
+    width: 557px;
+}
+.logodescription p:nth-child(3){
+    margin-top: 192px;
+}
+.product-container{
+    display: flex;
+    justify-content: space-around;
+}
+.product-header h2{
+    font-family: 'Lucida Bright';
+    border-bottom: 2px solid rgba(5, 107, 17, 1);
+    font-size: 32px;
+    font-weight: 600;
+    color: rgba(134, 53, 3, 1);
+    width: 274px;
+    line-height: 63px;
+    margin-bottom: 89px;
+    margin-top: 126px;
+}
+.product img:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.product-buttom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23px;
+}
+.product-buttom p:nth-child(1){
+    font-family: 'lucida-600';
+    font-size: 20px;
+    color: rgba(5, 82, 13, 1);
+    line-height: 17px;
+}
+.product-buttom p:nth-child(2){
+  font-family: 'Lucida Bright';
+  font-size: 15px;
+  color: rgba(125, 2, 2, 1);
+  font-weight: 600;
+  line-height: 17px;
+}
+.button{
+    font-family: 'lucida-600';
+    line-height: 22px;
+    font-size: 18px;
+    border: 2px solid  rgba(5, 82, 13, 1);
+    border-radius: 15px;
+    float: right;
+    margin-right: 125px;
+    margin-top: 56px;
+    width: 178px;
+    height: 42px;
+    margin-bottom: 165px;
+    cursor: pointer;
+}
+.button a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
