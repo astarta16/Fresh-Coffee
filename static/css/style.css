@@ -276,13 +276,11 @@ footer h4{
     justify-content: space-between;
 }
 .product{
-    height:402px;
-    width: 267px;
+   cursor: pointer;
 }
 .logodescription h4{
-    font-family: 'Lucida Bright';
+    font-family: 'lucida-600';
     font-size: 54px;
-    font-weight: 600;
     width: 542px;
     height: 137px;
     color: rgba(134, 53, 3, 1);
@@ -291,9 +289,8 @@ footer h4{
     margin-top: 117px;
 }
 .logodescription p{
-    font-family: 'Lucida Bright';
+    font-family: 'lucida-400';
     font-size: 24px;
-    font-weight: 400;
     color: rgba(134, 53, 3, 1);
     margin-left: 203px;
     margin-top: 43px;
@@ -307,10 +304,9 @@ footer h4{
     justify-content: space-around;
 }
 .product-header h2{
-    font-family: 'Lucida Bright';
+    font-family: 'lucida-600';
     border-bottom: 2px solid rgba(5, 107, 17, 1);
     font-size: 32px;
-    font-weight: 600;
     color: rgba(134, 53, 3, 1);
     width: 274px;
     line-height: 63px;
@@ -332,11 +328,9 @@ footer h4{
     color: rgba(5, 82, 13, 1);
     line-height: 17px;
 }
-.product-buttom p:nth-child(2){
-  font-family: 'Lucida Bright';
+.product-buttom p:nth-child(2){font-family: 'lucida-600';
   font-size: 15px;
   color: rgba(125, 2, 2, 1);
-  font-weight: 600;
   line-height: 17px;
 }
 .button{
